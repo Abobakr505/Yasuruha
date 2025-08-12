@@ -4,4 +4,4 @@
 
 <img src="https://i.postimg.cc/pVG891Zk/Screenshot-2025-08-12-200152.png" alt="" />
 
-<h4>Technologies : React Js , TailwindCSS</h4>
+<h3>Technologies : React Js , TailwindCSS</h3>
