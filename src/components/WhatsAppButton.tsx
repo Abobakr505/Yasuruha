@@ -2,22 +2,20 @@ import React, { useState } from "react";
 import {
   Headset,
   X,
-  MessageSquare,
-  PhoneCall,
-  MessageCircle,
-  Brush,
-  BriefcaseBusiness 
+  Sparkles as SparklesIcon,
+  BriefcaseBusiness
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 
 import { motion, AnimatePresence } from "framer-motion";
+import AiAssistantModal from './AiAssistantModal';
 
 export function WhatsAppButton() {
   const [open, setOpen] = useState(false);
-  const phoneNumber = "01093954137"; // Replace with actual phone number
+  const [modalOpen, setModalOpen] = useState(false);
+  const phoneNumber = "01093954137";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
-  // Animation variants for child icons
   const iconVariants = {
     hidden: { opacity: 0, scale: 0.5, y: 10 },
     visible: (i) => ({
@@ -37,7 +35,6 @@ export function WhatsAppButton() {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <div className="relative flex flex-col items-center">
-        {/* Support icons with entrance animation */}
         <AnimatePresence>
           {open && (
             <div className="flex flex-col items-center mb-4 space-y-3">
@@ -48,43 +45,45 @@ export function WhatsAppButton() {
                   href: whatsappUrl,
                 },
                 {
-                  Icon: BriefcaseBusiness ,
+                  Icon: BriefcaseBusiness,
                   label: " العمل معنا",
                   href: `https://yasuruha-form.netlify.app/`,
                 },
-              ].map((item, index) => (
-                <motion.a
-                  key={item.label}
-                  custom={index}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  variants={iconVariants}
-                  href={item.href}
-                  target={item.label.includes("واتساب") ? "_blank" : undefined}
-                  rel={
-                    item.label.includes("واتساب")
-                      ? "noopener noreferrer"
-                      : undefined
-                  }
-                  aria-label={item.label}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                  targret="_blank"
-                  className="relative group bg-green-500 rounded-full p-3 shadow-lg"
-                >
-                  <item.Icon className="h-6 w-6 text-white" />
-                  {/* Tooltip */}
-                  <span className="absolute right-14 top-1/2 -translate-y-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-200 whitespace-nowrap">
-                    {item.label}
-                  </span>
-                </motion.a>
-              ))}
+                {
+                  Icon: SparklesIcon,
+                  label: "المساعد الذكي",
+                  onClick: () => setModalOpen(true),
+                }
+              ].map((item, index) => {
+                const Component = item.href ? motion.a : motion.button;
+                return (
+                  <Component
+                    key={item.label}
+                    custom={index}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    variants={iconVariants}
+                    href={item.href}
+                    target={item.href && item.label.includes("واتساب") ? "_blank" : undefined}
+                    rel={item.href && item.label.includes("واتساب") ? "noopener noreferrer" : undefined}
+                    onClick={item.onClick}
+                    aria-label={item.label}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="relative group bg-green-500 rounded-full p-3 shadow-lg"
+                  >
+                    <item.Icon className="h-6 w-6 text-white" />
+                    <span className="absolute right-14 top-1/2 -translate-y-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-200 whitespace-nowrap">
+                      {item.label}
+                    </span>
+                  </Component>
+                );
+              })}
             </div>
           )}
         </AnimatePresence>
 
-        {/* Main toggle button */}
         <motion.button
           onClick={() => setOpen((prev) => !prev)}
           aria-label={open ? "إغلاق خيارات الدعم" : "تواصل معنا"}
@@ -97,6 +96,21 @@ export function WhatsAppButton() {
           {open ? <X className="h-6 w-6" /> : <Headset className="h-6 w-6" />}
         </motion.button>
       </div>
+
+      {/* مودال يظهر ويختفي بسلاسة */}
+      <AnimatePresence>
+        {modalOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.1 }}
+            className="fixed inset-0 flex items-center justify-center z-[100] bg-black/50"
+          >
+            <AiAssistantModal onClose={() => setModalOpen(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
