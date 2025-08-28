@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from 'lucide-react';
-import { FaTiktok } from "react-icons/fa";
+import { FaTiktok, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -15,14 +15,14 @@ const Footer = () => {
               <h3 className="text-2xl font-bold mb-6 text-primary">تابعنا</h3>
               <div className="flex space-x-reverse space-x-4 mb-6">
                 <a
-                  href="https://www.facebook.com/share/16J5LyFs6w/"
+                  href="https://www.facebook.com/profile.php?id=61569823090886"
                   className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all"
                   target="_blank"
                 >
                   <Facebook size={20} />
                 </a>
                 <a
-                  href="https://www.instagram.com/yasuruha2025?igsh=MTBmaDU3YWMwbjZrNg=="
+                  href="https://www.instagram.com/yasuruha1"
                   className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all"
                   target="_blank"
                 >
@@ -34,6 +34,13 @@ const Footer = () => {
                   target="_blank"
                 >
                   <FaTiktok size={20} />
+                </a>
+                <a
+                  href="https://www.youtube.com/@yasuruha"
+                  className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all"
+                  target="_blank"
+                >
+                  <FaYoutube size={20} />
                 </a>
               </div>
               <p className="text-gray-300">

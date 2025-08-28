@@ -29,10 +29,10 @@ const Hero = () => {
             <h1 className="main-text text-3xl sm:text-4xl lg:text-7xl font-bold text-white mb-8 leading-tight">
               يـسِّـرهـا
             </h1>
-            <p className="text-white text-3xl mb-10 opacity-90 max-w-xl">
+            <p className="text-white text-2xl md:text-3xl mb-10 opacity-90 max-w-xl">
              <span className='des-text dark:text-primary text-white'> {"<"} </span> يـسِّـرهـا ومـتـعـقـدهـاش <span className='des-text dark:text-primary text-white '> {">"} </span>
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-nowrap gap-4">
               <Button
                 size="lg"
                 variant="secondary"

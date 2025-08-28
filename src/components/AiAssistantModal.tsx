@@ -90,7 +90,7 @@ const AiAssistantModal: React.FC<AiAssistantModalProps> = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50 p-4" onClick={onClose}>
-      <div className="w-full max-w-2xl h-[80vh] bg-stone-100 rounded-2xl shadow-2xl flex flex-col border border-stone-300" onClick={e => e.stopPropagation()}>
+      <div className="w-full max-w-2xl h-[80vh] bg-stone-100 rounded-2xl shadow-2xl flex flex-col border border-stone-300 mt-20" onClick={e => e.stopPropagation()}>
         <header className="flex items-center justify-between p-4 border-b border-stone-200">
           <div className="flex items-center space-x-3">
             <SparklesIcon className="w-6 h-6 text-primary" />

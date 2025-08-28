@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "@/components/ui/sonner";
 import { Phone, Mail, Clock, MessageSquare } from "lucide-react";
-import { FaTiktok, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaTiktok, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const ContactInfo = ({ icon: Icon, title, content }) => (
   <div className="flex items-start space-x-reverse space-x-4 mb-8">
@@ -125,7 +125,7 @@ const Contact = () => {
                   </h3>
                   <div className="flex space-x-reverse space-x-4">
                     <a
-                      href="https://www.facebook.com/share/16J5LyFs6w/"
+                      href="https://www.facebook.com/profile.php?id=61569823090886"
                       target="_blank"
                       rel="noreferrer"
                       className="bg-primary/10 p-3 rounded-full hover:bg-primary hover:text-white transition-colors"
@@ -133,7 +133,7 @@ const Contact = () => {
                       <FaFacebookF size={20} />
                     </a>
                     <a
-                      href="https://www.instagram.com/yasuruha2025?igsh=MTBmaDU3YWMwbjZrNg=="
+                      href="https://www.instagram.com/yasuruha1"
                       target="_blank"
                       rel="noreferrer"
                       className="bg-primary/10 p-3 rounded-full hover:bg-primary hover:text-white transition-colors"
@@ -147,6 +147,14 @@ const Contact = () => {
                       className="bg-primary/10 p-3 rounded-full hover:bg-primary hover:text-white transition-colors"
                     >
                       <FaTiktok size={20} />
+                    </a>
+                    <a
+                      href="https://www.youtube.com/@yasuruha"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="bg-primary/10 p-3 rounded-full hover:bg-primary hover:text-white transition-colors"
+                    >
+                      <FaYoutube size={20} />
                     </a>
                   </div>
                 </div>

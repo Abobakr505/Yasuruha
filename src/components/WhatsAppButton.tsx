@@ -14,7 +14,8 @@ export function WhatsAppButton() {
   const [open, setOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const phoneNumber = "01093954137";
-  const whatsappUrl = `https://wa.me/${phoneNumber}`;
+  const message = encodeURIComponent("مرحبا، أود الاستفسار عن خدماتكم."); // يمكنك تغيير الرسالة الافتراضية
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   const iconVariants = {
     hidden: { opacity: 0, scale: 0.5, y: 10 },
