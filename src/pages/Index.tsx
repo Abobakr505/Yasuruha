@@ -8,6 +8,7 @@ import Portfolio from '../components/home/Portfolio';
 import About from '../components/home/About';
 import CTA from '../components/home/CTA';
 import ContactForm from '../components/home/ContactForm';
+import FollowersCounter from '@/components/home/FollowersCounter';
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <FollowersCounter />
         <Services />
         <Portfolio />
         <About />
