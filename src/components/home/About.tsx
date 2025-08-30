@@ -68,7 +68,7 @@ const About = () => {
         >
           {features.map((feature, index) => (
             <div key={index} className="text-center">
-              <div className="w-24 h-24 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center shadow-lg relative group">
+              <div className="w-24 h-24 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center shadow-lg relative group hover:scale-110 transition-transform duration-300">
                 <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-30 group-hover:opacity-60"></div>
                 <span className="text-white text-3xl font-bold relative z-10">
                   {index + 1}

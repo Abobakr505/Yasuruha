@@ -16,54 +16,22 @@ const projectCategories = [
 ];
 
 const projects = [
-  // {
-  //   id: 1,
-  //   title: "  موقع زورن للملابس",
-  //   category: "مواقع إلكترونية",
-  //   description: "تصميم وتطوير موقع متجاوب لبرند ملابس  ",
-  //   image: "/projects/project-2-1.png",
-  //   technologies: ["React", "Tailwind CSS", "Supabase"]
-  // },
-  // {
-  //   id: 2,
-  //   title: "موقع تعريفي ",
-  //   category: "مواقع إلكترونية",
-  //   description: "تصميم وتطوير موقع تعريفي متجاوب لدكتور اسنان  ",
-  //   image: "/projects/project-1-2.jpeg",
-  //   technologies: ["React", "Tailwind CSS", "Supabase"]
-  // },
-  // {
-  //   id: 3,
-  //   title: "شركة المحيط",
-  //   category: "مواقع إلكترونية",
-  //   description: "موقع تعريفي لشركة استشارات مالية وإدارية",
-  //   image: "/lovable-uploads/aba92ebb-5aa1-42ea-9fcd-d2bfe23ba137.png",
-  //   technologies: ["WordPress", "PHP", "jQuery"]
-  // },
-  // {
-  //   id: 4,
-  //   title: "تطبيق المتابع الذكي",
-  //   category: "تطبيقات جوال",
-  //   description: "تطبيق لإدارة المهام والمواعيد بميزات ذكية",
-  //   image: "/lovable-uploads/d654c2e8-32bc-4c20-b178-1449347c5bf5.png",
-  //   technologies: ["React Native", "Firebase", "Redux"]
-  // },
-  // {
-  //   id: 5,
-  //   title: "نظام إدارة المبيعات",
-  //   category: "برامج مكتبية",
-  //   description: "برنامج متكامل لإدارة المبيعات والمخزون",
-  //   image: "/lovable-uploads/f17e44dd-d139-4c7f-9df8-a294d3a6eff1.png",
-  //   technologies: ["C#", ".NET", "SQL Server"]
-  // },
-  // {
-  //   id: 6,
-  //   title: "هوية شركة الأمان",
-  //   category: "هوية بصرية",
-  //   description: "تصميم هوية بصرية متكاملة لشركة خدمات أمنية",
-  //   image: "/lovable-uploads/0874bc6b-236a-4653-8cf0-adc9dbbeddd5.png",
-  //   technologies: ["Adobe Illustrator", "Photoshop", "InDesign"]
-  // }
+  {
+    id: 1,
+    title: "  موقع زورن للملابس",
+    category: "مواقع إلكترونية",
+    description: "تصميم وتطوير موقع متجاوب لبرند ملابس  ",
+    image: "/projects/project-2-1.png",
+    technologies: ["React", "Tailwind CSS", "Supabase"]
+  },
+  {
+    id: 2,
+    title: "موقع تعريفي ",
+    category: "مواقع إلكترونية",
+    description: "تصميم وتطوير موقع تعريفي متجاوب لدكتور اسنان  ",
+    image: "/projects/project-1-2.jpeg",
+    technologies: ["React", "Tailwind CSS", "Supabase"]
+  },
 ];
 
 const PortfolioItem = ({ project }: { project: typeof projects[0] }) => {

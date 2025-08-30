@@ -68,7 +68,7 @@ const FollowersCounter = () => {
               {/* أيقونة مع خلفية متدرجة */}
               <div
                 className={`w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full 
-                           bg-gradient-to-b ${item.gradient} text-white text-4xl shadow-md mb-4`}
+                           bg-gradient-to-b ${item.gradient} text-white text-4xl shadow-md mb-4 hover:scale-110 transition-transform duration-300`}
               >
                 {item.icon}
               </div>

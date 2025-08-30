@@ -16,28 +16,28 @@ const Footer = () => {
               <div className="flex space-x-reverse space-x-4 mb-6">
                 <a
                   href="https://www.facebook.com/profile.php?id=61569823090886"
-                  className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all"
+                  className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all hover:scale-110  duration-300"
                   target="_blank"
                 >
                   <Facebook size={20} />
                 </a>
                 <a
-                  href="https://www.instagram.com/yasuruha1"
-                  className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all"
+                  href="https://www.instagram.com/yasuruha1" 
+                  className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all hover:scale-110  duration-300"
                   target="_blank"
                 >
                   <Instagram size={20} />
                 </a>
                 <a
                   href="https://www.tiktok.com/@yasuruha"
-                  className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all"
+                  className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all hover:scale-110  duration-300"
                   target="_blank"
                 >
                   <FaTiktok size={20} />
                 </a>
                 <a
                   href="https://www.youtube.com/@yasuruha"
-                  className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all"
+                  className="bg-white/10 p-3 rounded-full text-white hover:bg-primary transition-all hover:scale-110  duration-300"
                   target="_blank"
                 >
                   <FaYoutube size={20} />

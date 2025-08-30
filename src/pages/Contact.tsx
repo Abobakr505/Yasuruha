@@ -97,7 +97,7 @@ const Contact = () => {
 
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1">
               {/* معلومات الاتصال */}
               <div>
                 <h2 className="text-3xl font-bold mb-8 dark:text-white">

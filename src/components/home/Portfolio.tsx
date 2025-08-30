@@ -139,7 +139,7 @@ const Portfolio = () => {
           <Button 
             asChild 
             size="lg" 
-            className="text-lg px-8 shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 transition-all"
+            className="text-lg px-8 shadow-md shadow-primary/20   hover:scale-110 transition-transform duration-300"
           >
             <Link to="/portfolio">
               جميع المشاريع

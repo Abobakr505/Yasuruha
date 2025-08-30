@@ -15,6 +15,7 @@ const ContactForm = () => {
   });
   const formRef = useRef(null);
   const contentRef = useRef(null);
+  const formContainerRef = useRef(null);
 
   useEffect(() => {
     emailjs.init("k9Ti1ib4trNRh4VAQ"); // مفتاح عام من EmailJS
@@ -71,8 +72,13 @@ const ContactForm = () => {
       setTimeout(() => observer.observe(contentRef.current), 200);
     }
 
+    if (formContainerRef.current) {
+      setTimeout(() => observer.observe(formContainerRef.current), 400);
+    }
+
     return () => {
       if (contentRef.current) observer.unobserve(contentRef.current);
+      if (formContainerRef.current) observer.unobserve(formContainerRef.current);
     };
   }, []);
 
@@ -104,12 +110,11 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className="md:w-1/2">
+          <div ref={formContainerRef} className="md:w-1/2 opacity-0 translate-y-10 transition-all duration-700">
             <form
               ref={formRef}
               onSubmit={handleSubmit}
-              className="bg-white dark:bg-card p-8 rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300"
-              style={{ transitionDelay: "200ms" }}
+              className="bg-white dark:bg-card p-8 rounded-xl shadow-md hover:shadow-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 hover:scale-105"
             >
               <div className="mb-6">
                 <label className="block text-gray-700 dark:text-gray-200 font-medium mb-2">
@@ -121,7 +126,7 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="أدخل اسمك الكامل"
-                  className="bg-gray-50 dark:bg-dark/50"
+                  className="bg-gray-50 dark:bg-dark/50 transition-all duration-300 focus:shadow-md focus:scale-105"
                   required
                 />
               </div>
@@ -136,7 +141,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="example@email.com"
-                  className="bg-gray-50 dark:bg-dark/50"
+                  className="bg-gray-50 dark:bg-dark/50 transition-all duration-300 focus:shadow-md focus:scale-105"
                   required
                 />
               </div>
@@ -151,7 +156,7 @@ const ContactForm = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="أدخل رقم هاتفك"
-                  className="bg-gray-50 dark:bg-dark/50"
+                  className="bg-gray-50 dark:bg-dark/50 transition-all duration-300 focus:shadow-md focus:scale-105"
                 />
               </div>
 
@@ -163,7 +168,7 @@ const ContactForm = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="bg-gray-50 dark:bg-dark/50"
+                  className="bg-gray-50 dark:bg-dark/50 transition-all duration-300 focus:shadow-md focus:scale-105"
                   rows={5}
                   placeholder="اكتب رسالتك هنا..."
                   required
@@ -172,7 +177,7 @@ const ContactForm = () => {
 
               <Button
                 type="submit"
-                className="w-full text-lg py-6"
+                className="w-full text-lg py-6 rounded-full transition-all duration-300 hover:shadow-md hover:scale-105"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"}

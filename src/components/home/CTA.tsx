@@ -30,7 +30,7 @@ const CTA = () => {
   }, []);
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-28 overflow-hidden">
       {/* خلفية متدرجة */}
       <div className="absolute inset-0 bg-primary dark:bg-dark z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary dark:from-dark/80 dark:to-dark"></div>

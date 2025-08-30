@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Monitor, Smartphone, Globe, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -45,17 +44,18 @@ const ServiceCard = ({
   return (
     <div 
       ref={cardRef} 
-      className="service-card dark:bg-[#141414]  opacity-0 translate-y-10 border border-gray-100 dark:border-gray-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300"
+      className="service-card border-primary border-double dark:bg-[#141414] opacity-0 translate-y-10 border-2   hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 rounded-xl shadow-md hover:shadow-xl hover:scale-105"
+      style={{ borderRadius: "60px 30px" }}
     >
       <div className="flex justify-center mb-6">
-        <div className="bg-primary p-5 rounded-full">
+        <div className="bg-primary p-5 rounded-full transition-transform duration-300 hover:scale-110">
           <Icon className="text-white" size={28} />
         </div>
       </div>
       <h3 className="text-2xl font-bold mb-4 text-center dark:text-white">{title}</h3>
       <p className="text-gray-600 dark:text-gray-300 text-center mb-6">{description}</p>
       <div className="mt-6 text-center">
-        <Link to="/services" className="text-primary font-medium hover:text-white hover:bg-primary  py-1 px-2 border border-primary rounded-sm transition-all duration-300">
+        <Link to="/services" className="text-primary font-medium hover:text-white hover:bg-primary py-2 px-4 border border-primary rounded-full transition-all duration-300 hover:shadow-md hover:scale-105">
           المزيد
         </Link>
       </div>
@@ -136,7 +136,7 @@ const Services = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <Button asChild size="lg" className="text-lg">
+          <Button asChild size="lg" className="text-lg rounded-lg transition-all duration-300 hover:shadow-md hover:scale-105">
             <Link to="/services">
               تصفح جميع خدماتنا
             </Link>
