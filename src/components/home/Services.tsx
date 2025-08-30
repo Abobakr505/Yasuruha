@@ -44,7 +44,7 @@ const ServiceCard = ({
   return (
     <div 
       ref={cardRef} 
-      className="service-card border-primary border-double dark:bg-[#141414] opacity-0 translate-y-10 border-2   hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 rounded-xl shadow-md hover:shadow-xl hover:scale-105"
+      className="service-card border-primary border-double dark:bg-[#141414] opacity-0 translate-y-10 border-4   hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 rounded-xl shadow-md hover:shadow-xl hover:scale-105"
       style={{ borderRadius: "60px 30px" }}
     >
       <div className="flex justify-center mb-6">
